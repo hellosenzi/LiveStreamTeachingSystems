@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+  <!-- mybatis_config是全局配置文件 -->
+  
+  <configuration>
+
+	<!-- 2、settings包含很多重要的设置项 setting:用来设置每一个设置项 name：设置项名 value：设置项取值
+		mapUnderscoreToCamelCase:是否开启自动驼峰命名规则（camel case）映射，
+		即从经典数据库列名 A_COLUMN 到经典 Java 属性名 aColumn 的类似映射。
+	 -->
+	<!-- 进行自动映射时，数据以下划线命名，如数据库返回的"order_address"命名字段是否映射为class的"orderAddress"字段。默认为false --> 
+  	<settings>
+  		<setting name="mapUnderscoreToCamelCase" value="true"/>
+  	</settings>
+  	<typeAliases>
+  	
+  		<!-- 2、package:为某个包下的所有类批量起别名 
+				name：指定包名（为当前包以及下面所有的后代包的每一个类都起一个默认别名（类名小写），）
+		-->
+  		<package name="com.bean"/>
+  		<!-- 3、批量起别名的情况下，使用@Alias注解为某个类型指定新的别名 -->
+  	</typeAliases>
+  	
+  	
+  	
+  </configuration>
+  
+  
+  
